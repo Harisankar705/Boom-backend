@@ -5,7 +5,7 @@ const giftSchema=new mongoose.Schema<IGift>({
     video:{type:mongoose.Schema.Types.ObjectId,ref:"Video"},
     fromUser:{type:mongoose.Schema.Types.ObjectId,ref:"User"},
     toCreator:{type:mongoose.Schema.Types.ObjectId,ref:"User"},
-    amount:{type:Number},
+    amount:{type:Number,default:500},
     createdAt:{type:Date,default:Date.now}
 })
 const Gift=mongoose.model<IGift>("Gift",giftSchema)
